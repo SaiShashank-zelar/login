@@ -19,7 +19,7 @@
     * #mkdir src,cd src
   ```  
 
-### clone the git file in src folder:-
+### To clone the git file in src folder:-
 
 ```
     * #git clone https://github.com/zelar-soft-todoapp/login.git,cd login
@@ -40,9 +40,13 @@
 
     * #./login
 ```
-### To Start the service:-
+
+
+### To Step up  the service:-
 
 ```
+    * mv login.servie /etc/systemd/system/login.service
+    
     * #systemctl daemon-reload
     
     * #service login start
@@ -50,4 +54,6 @@
     * #service login status
     
     * #service login restart
+    
+```
   
