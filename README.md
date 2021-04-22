@@ -4,27 +4,27 @@
   
   
   ```
-    * #apt update
+     #apt update
 
-    * #wget -c https://dl.google.com/go/go1.14.2.linux-amd64.tar.gz -O - | sudo tar -xz -C /usr/local
+     #wget -c https://dl.google.com/go/go1.14.2.linux-amd64.tar.gz -O - | sudo tar -xz -C /usr/local
 
-    * #export PATH=$PATH:/usr/local/go/bin
+     #export PATH=$PATH:/usr/local/go/bin
 
-    * #source ~/.profile
+     #source ~/.profile
 
-    * #go version
+     #go version
 
-    * #mkdir /go,cd /go
+     #mkdir /go,cd /go
 
-    * #mkdir src,cd src
+     #mkdir src,cd src
   ```  
 
 ### To clone the git file in src folder:-
 
 ```
-    * #git clone https://github.com/zelar-soft-todoapp/login.git,cd login
+     #git clone https://github.com/zelar-soft-todoapp/login.git,cd login
 
-    * #export GOPATH=/go
+     #export GOPATH=/go
     
 ``` 
    
@@ -32,28 +32,28 @@
 ### To install Dependencies and To run go:-
 
 ```
-    * #apt install go-dep
+     #apt install go-dep
 
-    * #go get
+     #go get
 
-    * #go build
+     #go build
 
-    * #./login
+     #./login
 ```
 
 
 ### To Step up  the service:-
 
 ```
-    * mv login.servie /etc/systemd/system/login.service
+     #mv login.servie /etc/systemd/system/login.service
     
-    * #systemctl daemon-reload
+     #systemctl daemon-reload
     
-    * #service login start
+     #service login start
 
-    * #service login status
+     #service login status
     
-    * #service login restart
+     #service login restart
     
 ```
   
