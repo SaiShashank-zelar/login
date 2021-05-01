@@ -24,18 +24,12 @@ var (
 )
 
 func main() {
-	envhostport := os.Getenv("AUTH_API_PORT")
+	hostport := ":" + os.Getenv("AUTH_API_PORT")
 	userAPIAddress := os.Getenv("USERS_API_ADDRESS")
 
 	envJwtSecret := os.Getenv("JWT_SECRET")
 	if len(envJwtSecret) != 0 {
 		jwtSecret = envJwtSecret
-	}
-
-	if len(envhostport) == 0 {
-		hostport := ':' + os.Getenv("AUTH_API_PORT")	
-	} else {
-		hostport = ":8080"
 	}
 
 	userService := UserService{
