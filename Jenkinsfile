@@ -6,7 +6,14 @@ pipeline {
     stage('Download dependencies') {
       steps {
         sh '''
+            mkdir /go
+            cd /go/login
+        '''
+        sh '''
            export GOPATH=/go
+        '''
+        sh '''
+           apt install go-dep
         '''
         sh '''
            go get
@@ -19,8 +26,6 @@ pipeline {
     stage ('Prepare Artifacts') {
       steps {
         sh '''
-            mkdir /go
-            cd /go/login
             zip -r ../login.zip login
         '''
       }
