@@ -6,6 +6,12 @@ pipeline {
     stage('Download dependencies') {
       steps {
         sh '''
+           export GOPATH=/go
+        '''
+        sh '''
+           apt install go-dep
+        '''
+        sh '''
            go get
         '''
         sh '''
