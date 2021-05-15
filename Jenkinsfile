@@ -5,18 +5,12 @@ pipeline {
   tools {
         go 'go-1.16'
   }
-  environment {
-              GO111MODULE="auto"
-  }
   stages {
     stage('Download dependencies') {
       steps {
-        sh '''
-           export GOPATH=/go
-        '''
-        sh '''
-           go build
-        '''
+        withEnv(["PATH=$PATH:/usr/local/go/bin"]){
+              sh 'go get '
+              sh 'make build'
       }
     }
     stage ('Prepare Artifacts') {
