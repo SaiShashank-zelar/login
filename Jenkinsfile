@@ -12,7 +12,7 @@ pipeline {
     stage('Download dependencies') {
       steps {
         sh '''
-           go build *.go
+           go build gopkg.in/couchbase/gocb.v1
         '''
       }
     }
