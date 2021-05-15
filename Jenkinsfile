@@ -15,7 +15,6 @@ pipeline {
               sh 'make build'
         }
       }
-    }
     stage ('Prepare Artifacts') {
       steps {
         sh '''
