@@ -7,14 +7,15 @@ pipeline {
   }
   stages {
     stage('Download dependencies') {
+      environment {
+         GOROOT='/usr/local/go/bin'
+      }
       steps {
-        withEnv(["PATH+EXTRA=$PATH:/usr/local/go/bin"]){
              sh 'go get '
              sh 'make build'
               //sh '$path'
               //sh 'go get'
               //sh 'go build'
-        }
       }
     }
     stage ('Prepare Artifacts') {
