@@ -1,15 +1,15 @@
 pipeline {
   agent {
-    label 'todoapp'
+    label 'todoapp1'
   }
   tools {
         go 'go-1.16'
   }
   stages {
     stage('Download dependencies') {
-      environment {
-        path = 'PATH+EXTRA=/usr/local/go/bin '
-      }
+ //      environment {
+   //     path = 'PATH+EXTRA=/usr/local/go/bin '
+     // }
       steps {
               sh '$path'
               sh 'go get'
