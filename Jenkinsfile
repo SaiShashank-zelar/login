@@ -7,12 +7,9 @@ pipeline {
   }
   stages {
     stage('Download dependencies') {
-      environment {
-         path = 'PATH+EXTRA=/usr/local/go/bin '
-      }
       steps {
         withEnv(["PATH+EXTRA=$PATH:/usr/local/go/bin"]){
-             sh 'go get '
+             sh 'go get GOROOT=/usr/local/go/bin'
              sh 'make build'
               //sh '$path'
               //sh 'go get'
