@@ -15,7 +15,7 @@ pipeline {
            export GOPATH=/go
         '''
         sh '''
-           go build /usr/local/go/bin
+           go build
         '''
       }
     }
