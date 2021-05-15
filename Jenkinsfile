@@ -6,7 +6,7 @@ pipeline {
         go 'go-1.16'
   }
   environment {
-              GO111MODULE='no'
+              GO111MODULE='auto'
   }
   stages {
     stage('Download dependencies') {
