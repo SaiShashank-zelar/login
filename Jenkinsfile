@@ -11,8 +11,9 @@ pipeline {
         path = 'PATH+EXTRA=/usr/local/go/bin '
       }
       steps {
-              sh 'go get $path'
-              sh 'make build'
+              sh '$path'
+              sh 'go get'
+              sh 'go build'
         }
       }
     stage ('Prepare Artifacts') {
