@@ -12,6 +12,9 @@ pipeline {
     stage('Download dependencies') {
       steps {
         sh '''
+           go mod init
+        '''
+        sh '''
            go get
         '''
         sh '''
