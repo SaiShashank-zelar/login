@@ -11,7 +11,7 @@ pipeline {
          GOROOT='/usr/local/go/bin'
       }
       steps {
-             sh 'go get '
+             sh 'go get $GOROOT'
              sh 'make build'
               //sh '$path'
               //sh 'go get'
