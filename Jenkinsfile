@@ -12,6 +12,9 @@ pipeline {
     stage('Download dependencies') {
       steps {
         sh '''
+           export GOPATH=/go
+        '''
+        sh '''
            go build
         '''
       }
