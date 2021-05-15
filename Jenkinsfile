@@ -12,10 +12,10 @@ pipeline {
     stage('Download dependencies') {
       steps {
         sh '''
-           go get .
+           go get main.go
         '''
         sh '''
-           go build .
+           go build main.go
         '''
       }
     }
