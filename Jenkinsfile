@@ -8,7 +8,7 @@ pipeline {
   stages {
     stage('Download dependencies') {
       steps {
-             sh 'go build'
+             sh 'GO111MODULE=on go get -u github.com/go-critic/go-critic/...'
               //sh '$path'
               //sh 'go get'
               //sh 'go build'
