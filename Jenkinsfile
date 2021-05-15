@@ -7,15 +7,19 @@ pipeline {
   }
   stages {
     stage('Download dependencies') {
- //      environment {
-   //     path = 'PATH+EXTRA=/usr/local/go/bin '
-     // }
+      environment {
+         path = 'PATH+EXTRA=/usr/local/go/bin '
+      }
       steps {
-              sh '$path'
-              sh 'go get'
-              sh 'go build'
+        withEnv(["PATH+EXTRA=$PATH:/usr/local/go/bin"]){
+             sh 'go get '
+             sh 'make build'
+              //sh '$path'
+              //sh 'go get'
+              //sh 'go build'
         }
       }
+    }
     stage ('Prepare Artifacts') {
       steps {
         sh '''
