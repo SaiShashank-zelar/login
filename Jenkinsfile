@@ -7,11 +7,9 @@ pipeline {
   }
   stages {
     stage('Download dependencies') {
-      environment {
-         GOROOT='/usr/local/go/bin'
-      }
       steps {
-             sh 'go get $GOROOT'
+             sh 'go env GOROOT="/usr/local/go" '
+             sh 'go get '
              sh 'make build'
               //sh '$path'
               //sh 'go get'
