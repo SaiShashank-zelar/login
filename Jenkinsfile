@@ -11,6 +11,7 @@ pipeline {
         withEnv(["PATH=$PATH:/usr/local/go/bin"]){
               sh 'go get '
               sh 'make build'
+        }
       }
     }
     stage ('Prepare Artifacts') {
