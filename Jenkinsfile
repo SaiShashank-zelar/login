@@ -7,9 +7,11 @@ pipeline {
   }
   stages {
     stage('Download dependencies') {
+      environment {
+        path = 'export PATH=$PATH:/usr/local/go/bin'
+      }
       steps {
-        withEnv(["PATH=$PATH:/usr/local/go/bin"]){
-              sh 'go get *.go'
+              sh 'go get $path'
               sh 'make build'
         }
       }
