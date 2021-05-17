@@ -1,6 +1,6 @@
 pipeline {
   agent {
-    label 'todoapp1'
+    label 'todoapp'
   }
  tools {
      go 'go-1.16'
