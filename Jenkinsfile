@@ -6,7 +6,7 @@ pipeline {
      go 'go-1.16'
  }
  environment {
-    GO111MODULE = 'auto'
+    GO111MODULE = 'on'
  }
   stages {
     stage('Download dependencies') {
@@ -23,6 +23,7 @@ pipeline {
     stage('Build') {
       steps {
              echo 'Compiling and building'
+             sh 'go mod init github.com/direnv/direnv '
              sh 'go build '
 
       }
