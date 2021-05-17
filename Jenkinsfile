@@ -11,7 +11,7 @@ pipeline {
   stages {
     stage('Download dependencies') {
       steps {
-             sh 'go get -t go'
+             sh 'go get -t main.go'
              sh 'go build -t go'
               //sh '$path'
               //sh 'go get'
