@@ -23,7 +23,7 @@ pipeline {
     stage('Build') {
       steps {
              echo 'Compiling and building'
-             sh 'go build -o go'
+             sh 'go build '
 
       }
     }
