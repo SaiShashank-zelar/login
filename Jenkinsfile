@@ -14,9 +14,7 @@ pipeline {
              sh 'go mod download'
              sh 'go get '
              sh 'go build '
-              //sh '$path'
-              //sh 'go get'
-              //sh 'go build'
+
       }
     }
     stage ('Prepare Artifacts') {
