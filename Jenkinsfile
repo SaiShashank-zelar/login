@@ -13,7 +13,7 @@ pipeline {
       steps {
              sh 'go mod download golang.org/x/mod@v0.2.0'
              sh 'go get -d golang.org/x/mod@v0.2.0 '
-             sh 'go build -o *.go'
+             sh 'go build -o go main.go'
 
       }
     }
