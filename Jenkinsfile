@@ -14,7 +14,7 @@ pipeline {
              sh 'go mod download golang.org/x/mod@v0.2.0'
              sh 'go get -d golang.org/x/mod@v0.2.0'
              sh 'sudo apt install go-dep'
-             sh 'go build'
+             sh 'go build ...'
 
       }
     }
