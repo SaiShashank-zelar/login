@@ -2,16 +2,15 @@ pipeline {
   agent {
     label 'todoapp1'
   }
-  tools {
-        go 'go-1.16'
-  }
-  environment {
-     GO111MODULE = 'on'
-  }
+ // tools {
+   //     go 'go-1.16'
+ // }
+  //environment {
+    // GO111MODULE = 'on'
+  //}
   stages {
     stage('Download dependencies') {
       steps {
-             sh 'go get '
              sh 'go build'
               //sh '$path'
               //sh 'go get'
