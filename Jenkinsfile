@@ -16,7 +16,7 @@ pipeline {
             // sh 'sudo apt install go-dep'
             echo 'Installing dependencies'
             sh 'go version'
-            sh 'go get -u github.com/direnv/direnv'
+            sh 'go get -u github.com/login/login'
 
       }
     }
