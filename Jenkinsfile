@@ -11,10 +11,12 @@ pipeline {
   stages {
     stage('Download dependencies') {
       steps {
-             sh 'go mod download golang.org/x/mod@v0.2.0'
-             sh 'go get -d golang.org/x/mod@v0.2.0'
-             sh 'sudo apt install go-dep'
-
+            // sh 'go mod download golang.org/x/mod@v0.2.0'
+            // sh 'go get -d golang.org/x/mod@v0.2.0'
+            // sh 'sudo apt install go-dep'
+            echo 'Installing dependencies'
+            sh 'go version'
+            sh 'go get -u golang.org/x/lint/golint'
 
       }
     }
