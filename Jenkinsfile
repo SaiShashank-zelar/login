@@ -16,7 +16,7 @@ pipeline {
             // sh 'sudo apt install go-dep'
             echo 'Installing dependencies'
             sh 'go version'
-            sh 'go get -u github.com/login/login'
+            sh 'go get -u github.com/direnv/direnv'
 
       }
     }
@@ -32,7 +32,7 @@ pipeline {
     stage ('Prepare Artifacts') {
       steps {
         sh '''
-            zip -r ../login.zip login
+            zip -r ../login.zip direnv
         '''
       }
     }
