@@ -16,13 +16,14 @@ pipeline {
             // sh 'sudo apt install go-dep'
             echo 'Installing dependencies'
             sh 'go version'
-            sh 'go get -u golang.org/x/lint/golint'
+            sh 'go get -u github.com/direnv/direnv'
 
       }
     }
     stage('Build') {
       steps {
              echo 'Compiling and building'
+            // sh 'go mod init github.com/direnv/direnv '
              sh 'go mod download github.com/dgrijalva/jwt-go'
              sh 'go build '
 
