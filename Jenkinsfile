@@ -23,7 +23,7 @@ pipeline {
     stage('Build') {
       steps {
              echo 'Compiling and building'
-             sh 'go mod init github.com/direnv/direnv '
+             sh 'go mod download github.com/dgrijalva/jwt-go'
              sh 'go build '
 
       }
