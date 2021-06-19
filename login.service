@@ -7,7 +7,7 @@ Restart=always
 RestartSec=5s
 Environment=USERS_API_ADDRESS=http://localhost:8080
 Environment=AUTH_API_PORT=8080
-ExecStart=/go/login
+ExecStart=/go/login/login
 
 [Install]
 WantedBy=multi-user.target

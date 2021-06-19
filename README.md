@@ -16,13 +16,12 @@
 
      #mkdir /go,cd /go
 
-     #mkdir src,cd src
   ```  
 
 ### To clone the git file in src folder:-
 
 ```
-     #git clone https://github.com/zelar-soft-todoapp/login.git,cd login
+     #git clone https://github.com/SaiShashank-zelar/login.git,cd login
 
      #export GOPATH=/go
     
@@ -33,6 +32,8 @@
 
 ```
      #apt install go-dep
+     
+     #go mod init example.com/login
 
      #go get
 
@@ -62,5 +63,5 @@
 
 ![Screenshot (571)](https://user-images.githubusercontent.com/82635540/116516918-d76da480-a8eb-11eb-8bcf-c1e600c6bc1b.png)
 
-#release 0.0.4
+
 
