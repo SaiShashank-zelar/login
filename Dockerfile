@@ -6,7 +6,7 @@ RUN         go mod init example.com/login
 RUN         go get
 RUN         go build
 COPY        logins.service  /etc/systemd/system/logins.service
-CMD         ["service logins start"]
+CMD         ["/etc/systemd/system/logins start"]
 
 
 
