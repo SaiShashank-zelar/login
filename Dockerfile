@@ -5,7 +5,7 @@ COPY        / .
 RUN         go mod init example.com/login
 RUN         go get
 RUN         go build
-COPY        login.service /etc/systemd/system/login.service
+EXPOSE      8080
 CMD         ["login"]
 
 
