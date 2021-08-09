@@ -5,8 +5,8 @@ COPY        / .
 RUN         go mod init example.com/login
 RUN         go get
 RUN         go build
-COPY        logins.service  /etc/systemd/system/logins.service
-CMD         ["/etc/systemd/system/logins start"]
+ENV         AUTH_API_PORT=8080
+CMD         ["login"]
 
 
 
